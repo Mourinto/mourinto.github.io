@@ -98,3 +98,42 @@ img {
   margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
+/* Footer styles */
+footer {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+/* Social media icons styles */
+.social-icons a {
+  color: #333;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0073e6; /* Change to a primary color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  header nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .social-icons a {
+      font-size: 18px;
+  }
+}
+
+a i {
+  text-decoration: none; /* Remove underline from icons */
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+}

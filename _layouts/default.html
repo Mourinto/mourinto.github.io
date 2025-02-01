@@ -8,14 +8,25 @@
       </div>
     </main>
 
-    {%-if site.goat_counter and jekyll.environment == "production"-%}
-      {%-include goat_counter.html-%}
-    {%-endif-%}
-
-    {% if page.custom_js %}
-      {% for js_file in page.custom_js %}
-        <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
-      {% endfor %}
-    {% endif %}
+    <footer>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <div class="social-icons">
+          {% if site.social_links.twitter %}
+              <a href="{{ site.social_links.twitter }}" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+              </a>
+          {% endif %}
+          {% if site.social_links.github %}
+              <a href="{{ site.social_links.github }}" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+              </a>
+          {% endif %}
+          {% if site.social_links.linkedin %}
+              <a href="{{ site.social_links.linkedin }}" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+          {% endif %}
+      </div>
+  </footer>
   </body>
 </html>

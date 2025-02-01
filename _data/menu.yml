@@ -1,6 +1,3 @@
-# For documentation on this file, see:
-# https://github.com/riggraz/no-style-please#customize-the-menu
-
 entries:
   - title: About
     entries:
@@ -14,8 +11,8 @@ entries:
       show_more_url: archive.html
 
   - title: posts by category
-    post_list:
-      category: Code
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+    entries:
+      - title: Category 1
+        url: /category/category1/
+      - title: Category 2
+        url: /category/category2/

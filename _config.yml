@@ -1,24 +1,33 @@
-title: Monier's Notes! # name of the site
-author: Monier ElTawaf # name of site's author
-email: m.monierx@gmail.com # email of site's author
+title: Monier's Notes!
+author: Monier ElTawaf
+email: m.monierx@gmail.com
 url: https://mourinto.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
   Hiker, Programmer, and Flauenr.
 
-permalink: /:slug.html
+# Default category for posts
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      category: "Uncategorized"
+      categories: "Uncategorized"
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
-
-remote_theme: riggraz/no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
 
 theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
+  appearance: "dark" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: false # show blog description in home page
   lowercase_titles: true # show titles in lowercase in lists
+
+social_links:
+  twitter: "https://twitter.com/mourinto"
+  github: "https://github.com/mourinto"
+  linkedin: "https://linkedin.com/in/monierx"
 
 sass:
   style: compressed
@@ -28,10 +37,18 @@ plugins:
   - jekyll-seo-tag
   - jektex
 
-jektex:
-  cache_dir: ".jektex-cache"
-  ignore: ["*.xml"]
-  silent: false
-  macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+        category: /category/:name/
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
