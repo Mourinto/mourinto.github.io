@@ -1,5 +1,5 @@
 ---
 layout: archive
-title: The title of the page here
+title: Archive for Category 'name-of-category'
 which_category: name-of-category
 ---

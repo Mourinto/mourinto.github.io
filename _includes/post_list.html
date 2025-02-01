@@ -1,4 +1,4 @@
-{%-if include.category-%}
+{%-if include.category and site.categories[include.category]-%}
   {%-assign posts = site.categories[include.category]-%}  
 {%-else-%}
   {%-assign posts = site.posts-%}
