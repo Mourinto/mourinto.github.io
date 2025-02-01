@@ -1,0 +1,37 @@
+title: Monier's Notes!
+author: Monier ElTawaf
+email: m.monierx@gmail.com
+url: https://mourinto.github.io # root address of the site
+baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
+description: > # description of the site (multiple lines allowed)
+  Hiker, Programmer, and Flauenr.
+
+favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
+
+theme_config:
+  appearance: "dark" # can be "light", "dark" or "auto"
+  back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%Y-%m-%d" # customize how date is formatted
+  show_description: false # show blog description in home page
+  lowercase_titles: true # show titles in lowercase in lists
+
+social_links:
+  twitter: "https://twitter.com/mourinto"
+  github: "https://github.com/mourinto"
+  linkedin: "https://linkedin.com/in/monierx"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jektex
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body a="{{ site.theme_config.appearance | default: "auto" }}">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <div class="social-icons">
+          {% if site.social_links.twitter %}
+              <a href="{{ site.social_links.twitter }}" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+              </a>
+          {% endif %}
+          {% if site.social_links.github %}
+              <a href="{{ site.social_links.github }}" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+              </a>
+          {% endif %}
+          {% if site.social_links.linkedin %}
+              <a href="{{ site.social_links.linkedin }}" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+          {% endif %}
+      </div>
+  </footer>
+  </body>
+</html>
